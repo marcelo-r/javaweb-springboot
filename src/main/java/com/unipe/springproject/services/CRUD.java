@@ -1,6 +1,4 @@
-package com.unipe.springproject.rest;
-
-import com.unipe.springproject.domain.Department;
+package com.unipe.springproject.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +6,8 @@ import java.util.Optional;
 public interface CRUD<T> {
 
     List<T> findAll();
-    Optional<T> save(T obj);
-    Optional<T> findById(long id);
+    T save(T obj);
+    Optional<T> findById(Long id);
     void delete(T obj);
-    Optional<T> update(Long id, T obj);
+    T update(Long id, T obj);
 }
